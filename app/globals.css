@@ -1,0 +1,67 @@
+/* app/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --sbw-sand: #fbf7f2;
+  --sbw-deep: #073249;
+  --sbw-sunrise: #ff914d;
+  --sbw-sunrise-light: #ffb86b;
+  --sbw-aqua: #12b3b3;
+  --sbw-sky: #7fd4ff;
+}
+
+body {
+  background-color: var(--sbw-sand);
+}
+
+/* Helpers */
+.section-wrapper {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.section-header {
+  text-align: center;
+}
+
+.section-title {
+  @apply text-2xl md:text-3xl font-semibold text-sbw-deep;
+}
+
+.section-subtitle {
+  @apply mt-2 text-sm md:text-base text-sbw-deep/80 max-w-2xl mx-auto;
+}
+
+/* Reutilizables */
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-full px-5 py-2.5 bg-gradient-to-r from-sbw-sunrise to-sbw-aqua text-white text-sm font-semibold shadow-md hover:shadow-lg transition;
+}
+
+.btn-outline {
+  @apply inline-flex items-center justify-center rounded-full px-5 py-2.5 border border-sbw-aqua text-sbw-aqua bg-white/80 text-sm font-semibold hover:bg-sbw-aqua hover:text-white transition;
+}
+
+.form-label {
+  @apply block mb-1 text-xs font-semibold text-sbw-deep/80;
+}
+
+.form-input {
+  @apply w-full rounded-xl border border-sbw-sky/30 bg-white px-3 py-2 text-sm text-sbw-deep outline-none focus:ring-2 focus:ring-sbw-aqua/60 focus:border-sbw-aqua/60;
+}
+
+/* Tailwind custom colors (usar en tailwind.config.js)
+  theme: {
+    extend: {
+      colors: {
+        'sbw-sand': 'var(--sbw-sand)',
+        'sbw-deep': 'var(--sbw-deep)',
+        'sbw-sunrise': 'var(--sbw-sunrise)',
+        'sbw-sunrise-light': 'var(--sbw-sunrise-light)',
+        'sbw-aqua': 'var(--sbw-aqua)',
+        'sbw-sky': 'var(--sbw-sky)',
+      },
+    },
+  },
+*/
